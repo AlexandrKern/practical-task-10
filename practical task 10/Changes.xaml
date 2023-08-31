@@ -1,0 +1,35 @@
+﻿<Window x:Class="practical_task_10.Changes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:practical_task_10"
+        mc:Ignorable="d"
+        Title="Инфо. об изменениях" Height="450" Width="800"
+        MinHeight = "450" MinWidth="800"  MaxHeight="800" MaxWidth="1000">
+    <Grid>
+        <DataGrid  DataGrid.RowHeight ="NaN"  x:Name="dataGridChanges" Grid.Column="0" Grid.Row="0" AutoGenerateColumns="False"  >
+        
+        <DataGrid.Columns>
+               
+                <DataGridTextColumn Width="*" Header="Дата и время" Binding="{Binding dateTime}"/>
+                <DataGridTextColumn Width="*" Header="Должность" Binding="{Binding user}"/>
+                <DataGridTextColumn Width="*" Header="До изменения" Binding="{Binding tеheChangeDataWas }" >
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn  Width="*" Header="После изменения" Binding="{Binding theChangedDataBecame }">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+            
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

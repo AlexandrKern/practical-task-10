@@ -1,0 +1,21 @@
+﻿<Window x:Class="practical_task_10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:practical_task_10"
+        mc:Ignorable="d"
+         Title="Клиенты" Height="200" Width="250"
+        MinHeight = "200" MinWidth="250"  MaxHeight="200" MaxWidth="250">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ComboBox x:Name="comboBox" Grid.Row="0"  Margin="20,25,20,30" Loaded="ComboBox_Loaded" >
+            <ComboBoxItem x:Name="consultant">Консультант</ComboBoxItem>
+            <ComboBoxItem x:Name="manager">Менеджер</ComboBoxItem>
+        </ComboBox>
+        <Button Content="Подтвердить"  Grid.Row="1" Margin="50,25" Click="Button_Click" />
+    </Grid>
+</Window>
